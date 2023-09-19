@@ -1,0 +1,33 @@
+@import '@flaticon/flaticon-uicons/css/all/all';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--color-background: #f6f9f9;
+	--color-primary: #410deb;
+	--color-cross: #f3f3f3;
+	--color-dark: #0e0e0e;
+	--color-border: #d3dbda;
+	--color-dot: #e0e8e4;
+	--color-quantity: #020a05;
+	--color-secondaryText: #2f3333a6;
+	--color-ratingGreen: #79e003;
+}
+
+.box {
+	--mask: radial-gradient(
+				19.69px at 50% calc(100% - 27.75px),
+				#000 99%,
+				#0000 101%
+			)
+			calc(50% - 30px) 0/60px 100%,
+		radial-gradient(19.69px at 50% calc(100% + 12.75px), #0000 99%, #000 101%)
+			50% calc(100% - 15px) / 60px 100% repeat-x;
+	-webkit-mask: var(--mask);
+	mask: var(--mask);
+}
+.carousel .thumbs-wrapper {
+	display: none;
+}
