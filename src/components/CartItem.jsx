@@ -1,4 +1,5 @@
 import React from 'react';
+import { TrashIcon } from '@heroicons/react/24/outline';
 
 export function CartItem({ name, price, id, setCartItems, cartItems }) {
 	function handleRemoveItem() {
@@ -23,7 +24,8 @@ export function CartItem({ name, price, id, setCartItems, cartItems }) {
 						<h4 className='text-sm font-semibold leading-4'>AED {price}</h4>
 					</div>
 					<div onClick={handleRemoveItem}>
-						<i className='fi fi-rr-trash'></i>
+						{/* <i className='fi fi-rr-trash'></i> */}
+						<TrashIcon className='w-6' />
 					</div>
 				</div>
 			</div>

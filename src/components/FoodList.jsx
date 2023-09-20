@@ -26,7 +26,7 @@ export function FoodList({ name, id, cartItems, setCartItems }) {
 			<div className='mt-[9px]'>
 				{itemNames.map((itemname, index) => {
 					return (
-						<div className='mt-1' key={index}>
+						<div className='mt-1 w-full' key={index}>
 							<FoodListItem
 								id={id + (index + 1)}
 								cartItems={cartItems}

@@ -1,4 +1,6 @@
 import { CartItem } from './CartItem';
+import { MapPinIcon } from '@heroicons/react/24/outline';
+import { StarIcon } from '@heroicons/react/24/solid';
 
 export function Cart({ cartItems, setCartItems }) {
 	return (
@@ -14,14 +16,16 @@ export function Cart({ cartItems, setCartItems }) {
 				<div className='flex justify-center pt-[19px]'>
 					<h4 className='font-bold text-lg'>Jamwaharat Esham Restaurant</h4>
 					<span className='text-colorRatingGreen flex items-center ml-[14px]'>
-						<i className='fi fi-ss-star h-[20px] mr-[2px]'></i>
+						{/* <i className='fi fi-ss-star h-[20px] mr-[2px]'></i> */}
+						<StarIcon className='w-4' />
 						<p className='font-openSans font-semibold text-sm leading-4'>4.9</p>
 					</span>
 				</div>
 				<div className='flex gap-x-[12px] items-center justify-center'>
 					<p>Wafi Mall, First Floor, Horus, Phase 5, Dubai</p>
 					<div className='bg-black w-9 h-9 flex justify-center items-center rounded-xl'>
-						<i className='fi fi-rr-marker text-white'></i>
+						{/* <i className='fi fi-rr-marker text-white'></i> */}
+						<MapPinIcon className='w-5 stroke-1 text-white' />
 					</div>
 				</div>
 				<div className='flex justify-center mt-1'>

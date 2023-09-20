@@ -1,6 +1,12 @@
 import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
+import {
+	ChevronRightIcon,
+	ChevronLeftIcon,
+	XMarkIcon,
+} from '@heroicons/react/24/outline';
+import { StarIcon, HeartIcon } from '@heroicons/react/24/solid';
 
 export default function Modal({ setOpenId }) {
 	return (
@@ -11,20 +17,22 @@ export default function Modal({ setOpenId }) {
 					renderArrowNext={(clickHandler) => {
 						return (
 							<button
-								className='absolute top-2/3 right-5 bg-white h-12 w-12 rounded-full border border-colorDot flex justify-center items-center shadow-[0_3px_6px_#00000029] z-10'
+								className='absolute top-2/3 right-5 bg-white h-10 w-10 rounded-full border border-colorDot flex justify-center items-center shadow-[0_3px_6px_#00000029] z-10'
 								onClick={clickHandler}
 							>
-								<i className='fi fi-rr-arrow-right mt-2 text-colorPrimary'></i>
+								{/* <i className='fi fi-rr-arrow-right mt-2 text-colorPrimary'></i> */}
+								<ChevronRightIcon className='w-5 stroke-2' />
 							</button>
 						);
 					}}
 					renderArrowPrev={(clickHandler) => {
 						return (
 							<button
-								className='absolute top-2/3 left-5 bg-white h-12 w-12 rounded-full border border-colorDot flex justify-center items-center shadow-[0_3px_6px_#00000029] z-10'
+								className='absolute top-2/3 left-5 bg-white h-10 w-10 rounded-full border border-colorDot flex justify-center items-center shadow-[0_3px_6px_#00000029] z-10'
 								onClick={clickHandler}
 							>
-								<i className='fi fi-rr-arrow-left mt-2 text-colorPrimary'></i>
+								{/* <i className='fi fi-rr-arrow-left mt-2 text-colorPrimary'></i> */}
+								<ChevronLeftIcon className='w-5 stroke-2' />
 							</button>
 						);
 					}}
@@ -59,16 +67,21 @@ export default function Modal({ setOpenId }) {
 					</div>
 				</Carousel>
 				<div className='absolute top-0 right-0 p-5 flex gap-x-2'>
-					<div className='bg-gray-300/70 w-12 h-12 rounded-full flex justify-center items-center'>
-						<i className='fi fi-sr-heart mt-[5px] text-white'></i>
+					<div className='w-10 h-10 '>
+						<div className='bg-gray-300/50 w-full h-full rounded-full'>
+							{/* <i className='fi fi-sr-heart mt-[5px] text-white'></i> */}
+						</div>
+						<HeartIcon className='w-5 text-white absolute top-[30px] left-[30px]' />
 					</div>
+
 					<div
-						className='bg-black w-12 h-12 rounded-full flex justify-center items-center'
+						className='bg-black w-10 h-10 rounded-full flex border border-white justify-center items-center'
 						onClick={() => {
 							setOpenId(null);
 						}}
 					>
-						<i className='fi fi-rr-cross mt-[5px] text-white'></i>
+						{/* <i className='fi fi-rr-cross mt-[5px] text-white'></i> */}
+						<XMarkIcon className='text-white w-6' />
 					</div>
 				</div>
 			</div>
@@ -77,7 +90,8 @@ export default function Modal({ setOpenId }) {
 					<h3 className='font-semibold text-lg leading-4'>Hummus</h3>
 					<span className='text-colorRatingGreen flex items-center ml-5'>
 						<p className='font-openSans font-semibold text-sm leading-4'>4.9</p>
-						<i className='fi fi-ss-star h-[20px]'></i>
+						{/* <i className='fi fi-ss-star h-[20px]'></i> */}
+						<StarIcon className='w-4' />
 					</span>
 				</div>
 				<div>

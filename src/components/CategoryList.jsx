@@ -1,4 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+import {
+	ArrowLongRightIcon,
+	ArrowLongLeftIcon,
+} from '@heroicons/react/24/outline';
 
 export function CategoryList({ categoryRef, scrollContainerRef, categories }) {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -99,7 +103,8 @@ export function CategoryList({ categoryRef, scrollContainerRef, categories }) {
 					className='absolute top-6 right-5 bg-white h-12 w-12 rounded-full border border-colorDot flex justify-center items-center shadow-[0_3px_6px_#00000029] z-10'
 					onClick={handleRightClick}
 				>
-					<i className='fi fi-rr-arrow-right mt-2 text-colorPrimary'></i>
+					{/* <i className='fi fi-rr-arrow-right mt-2 text-colorPrimary'></i> */}
+					<ArrowLongRightIcon className='w-8 stroke-1 text-colorPrimary' />
 				</button>
 			)}
 			{activeIndex > 0 && (
@@ -107,7 +112,8 @@ export function CategoryList({ categoryRef, scrollContainerRef, categories }) {
 					className='absolute top-6 left-5 bg-white h-12 w-12 rounded-full border border-colorDot flex justify-center items-center shadow-[0_3px_6px_#00000029] z-10'
 					onClick={handleLeftClick}
 				>
-					<i className='fi fi-rr-arrow-left mt-2 text-colorPrimary'></i>
+					{/* <i className='fi fi-rr-arrow-left mt-2 text-colorPrimary'></i> */}
+					<ArrowLongLeftIcon className='w-8 stroke-1 text-colorPrimary' />
 				</button>
 			)}
 			<div className='bg-white h-[60px] w-[50px] absolute top-4 -right-2'></div>
