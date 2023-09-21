@@ -69,7 +69,10 @@ export function FoodListItem({ id, cartItems, setCartItems, name, selected }) {
 						</p>
 						{/* <i className='fi fi-rr-eye ml-5' onClick={() => setOpenId(id)}></i> */}
 						<div className='smallScreen:flex gap-x-4 hidden'>
-							<EyeIcon className='w-7 stroke-1' onClick={() => setOpenId(id)} />
+							<EyeIcon
+								className='w-7 stroke-1 cursor-pointer'
+								onClick={() => setOpenId(id)}
+							/>
 							{id === openId && <Modal setOpenId={setOpenId} />}
 							<div
 								className={`w-6 h-6 rounded-full mt-[1.5px] flex items-center justify-center ${

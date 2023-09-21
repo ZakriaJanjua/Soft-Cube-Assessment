@@ -81,7 +81,7 @@ export default function Modal({ setOpenId }) {
 						}}
 					>
 						{/* <i className='fi fi-rr-cross mt-[5px] text-white'></i> */}
-						<XMarkIcon className='text-white w-6' />
+						<XMarkIcon className='text-white w-6 cursor-pointer' />
 					</div>
 				</div>
 			</div>
