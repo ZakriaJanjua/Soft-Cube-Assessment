@@ -4,7 +4,7 @@ import { StarIcon } from '@heroicons/react/24/solid';
 
 export function Cart({ cartItems, setCartItems }) {
 	return (
-		<div className='xl:w-[410px] w-[881px] mt-10 xl:mt-0 border border-colorBorder h-fit rounded-xl relative box'>
+		<div className='minScreen:max-w-md w-[881px] mt-10 minScreen:mt-0 border border-colorBorder h-fit rounded-xl relative box'>
 			<div className='w-full h-[179px] overflow-hidden'>
 				<img
 					src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80'
@@ -15,17 +15,19 @@ export function Cart({ cartItems, setCartItems }) {
 			<div className='bg-white rounded-xl'>
 				<div className='flex justify-center pt-[19px]'>
 					<h4 className='font-bold text-lg'>Jamwaharat Esham Restaurant</h4>
-					<span className='text-colorRatingGreen flex items-center ml-[14px]'>
+					<span className='text-colorRatingGreen flex items-center ml-3'>
 						{/* <i className='fi fi-ss-star h-[20px] mr-[2px]'></i> */}
 						<StarIcon className='w-4' />
 						<p className='font-openSans font-semibold text-sm leading-4'>4.9</p>
 					</span>
 				</div>
 				<div className='flex gap-x-[12px] items-center justify-center'>
-					<p>Wafi Mall, First Floor, Horus, Phase 5, Dubai</p>
+					<p className='text-sm'>
+						Wafi Mall, First Floor, Horus, Phase 5, Dubai
+					</p>
 					<div className='bg-black w-9 h-9 flex justify-center items-center rounded-xl'>
 						{/* <i className='fi fi-rr-marker text-white'></i> */}
-						<MapPinIcon className='w-5 stroke-1 text-white' />
+						<MapPinIcon className='w-5 text-white' />
 					</div>
 				</div>
 				<div className='flex justify-center mt-1'>

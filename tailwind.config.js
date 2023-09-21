@@ -6,6 +6,16 @@ export default {
 			workSans: ['Work Sans'],
 			openSans: ['Open Sans'],
 		},
+		screens: {
+			sm: '620px',
+			md: '786px',
+			lg: '1024px',
+			xl: '1280px',
+			'2xl': '1536px',
+			component: '881px',
+			minScreen: '1400px',
+			smallScreen: '900px',
+		},
 		extend: {
 			colors: {
 				colorBackground: 'var(--color-background)',

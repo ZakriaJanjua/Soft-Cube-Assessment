@@ -1,6 +1,7 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { CategoryList } from './CategoryList';
 import { FoodList } from './FoodList';
+import { useSwipeable } from 'react-swipeable';
 
 export function MealList({ cartItems, setCartItems }) {
 	const containerRef = useRef(null);
@@ -15,9 +16,10 @@ export function MealList({ cartItems, setCartItems }) {
 		'Grilled',
 		'Seafood',
 	];
+
 	return (
 		<div
-			className='w-[881px] max-h-[863px] overflow-auto bg-white rounded-xl border border-colorBorder'
+			className='smallScreen:min-w-[881px] smallScreen:w-[881px] smallScreen:max-h-[863px] max-h-screen overflow-auto smallScreen:bg-white smallScreen:rounded-xl border border-colorBorder'
 			ref={scrollContainerRef}
 		>
 			<div className='overflow-hidden border-b-2 border-colorBorder sticky bg-white rounded-t-xl top-0 z-50'>
@@ -31,8 +33,8 @@ export function MealList({ cartItems, setCartItems }) {
 				{categories.map((category, index) => {
 					return (
 						<div
-							id={`div-${index + 1}`}
-							className='pl-[54px] pt-[100.5px] pr-[40px]'
+							id={`div-${index}`}
+							className='smallScreen:pl-14 pt-24 smallScreen:pr-10 px-2 bg-white mt-4 smallScreen:mt-0'
 							key={index}
 						>
 							<FoodList

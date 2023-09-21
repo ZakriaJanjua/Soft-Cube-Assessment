@@ -23,7 +23,7 @@ export function FoodListItem({ id, cartItems, setCartItems, name, selected }) {
 	return (
 		<div>
 			<div
-				className={`p-2 flex border-[3px] w-full ${
+				className={`smallScreen:p-2 px-4 py-8 flex smallScreen:flex-row flex-row-reverse border-[3px] w-full ${
 					selected ? 'rounded-xl border-colorPrimary' : 'border-transparent'
 				}`}
 				style={{
@@ -33,25 +33,32 @@ export function FoodListItem({ id, cartItems, setCartItems, name, selected }) {
 							: 'white',
 				}}
 			>
-				<div className='w-[72px]' onClick={handleInsertItem}>
+				<div className='smallScreen:w-full w-1/2 relative'>
 					<img
 						src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80'
 						alt='food'
-						className='rounded-lg'
+						className='float-right smallScreen:float-none smallScreen:rounded-lg smallScreen:w-[72px] w-[130px]'
 					/>
+					<button className='absolute border -bottom-4 right-[0.4rem] bg-white px-10 py-2.5 border-colorPrimary text-colorPrimary text-lg smallScreen:hidden block'>
+						Add
+					</button>
 				</div>
-				<div className='ml-2 flex flex-col w-full justify-center gap-y-[9px]'>
-					<h3 className='font-semibold text-lg leading-4'>{name}</h3>
-					<div className='flex items-center justify-between relative w-full'>
-						<h4 className='leading-4 text-sm font-semibold'>AED 40</h4>
-						<span className='text-colorRatingGreen flex items-center'>
+				<div className='smallScreen:ml-2 flex flex-col w-full justify-center gap-y-1'>
+					<h3 className='smallScreen:font-semibold smallScreen:text-lg text-2xl smallScreen:leading-4 leading-7'>
+						{name}
+					</h3>
+					<div className='flex gap-x-4 items-center justify-between relative w-full'>
+						<h4 className='leading-4 smallScreen:text-sm text-xl font-semibold whitespace-nowrap mt-3 smallScreen:mt-0'>
+							AED 40
+						</h4>
+						<span className='text-colorRatingGreen smallScreen:flex items-center hidden'>
 							<p className='font-openSans font-semibold text-sm leading-4'>
 								4.9
 							</p>
 							{/* <i className='fi fi-ss-star h-[20px]'></i> */}
 							<StarIcon className='w-4' />
 						</span>
-						<p className='truncate w-[458px] text-sm leading-4 text-colorSecondaryText'>
+						<p className='truncate w-[458px] text-sm leading-4 text-colorSecondaryText smallScreen:block hidden'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 							enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -61,7 +68,7 @@ export function FoodListItem({ id, cartItems, setCartItems, name, selected }) {
 							sunt in culpa qui officia deserunt mollit anim id est laborum.
 						</p>
 						{/* <i className='fi fi-rr-eye ml-5' onClick={() => setOpenId(id)}></i> */}
-						<div className='flex gap-x-4'>
+						<div className='smallScreen:flex gap-x-4 hidden'>
 							<EyeIcon className='w-7 stroke-1' onClick={() => setOpenId(id)} />
 							{id === openId && <Modal setOpenId={setOpenId} />}
 							<div

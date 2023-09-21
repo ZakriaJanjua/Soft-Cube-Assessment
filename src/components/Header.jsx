@@ -2,8 +2,8 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 
 export function Header() {
 	return (
-		<section className='min-w-[881px]'>
-			<div className='bg-white h-24 flex items-center 2xl:px-[296px] xl:px-15 px-10 justify-between shadow-sm'>
+		<section>
+			<div className='bg-white h-24 flex items-center 2xl:px-72 xl:px-36 justify-between shadow-sm'>
 				<div className='flex items-center'>
 					<div className='bg-colorCross w-12 h-12 rounded-full flex justify-center items-center'>
 						{/* <i className='fi fi-rr-cross mt-[3px]'></i> */}

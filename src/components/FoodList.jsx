@@ -16,12 +16,16 @@ export function FoodList({ name, id, cartItems, setCartItems }) {
 		<div>
 			<div className='flex items-end justify-between'>
 				<div className='flex '>
-					<h4 className='font-bold text-xl'>{name}</h4>
-					<p className='text-white bg-colorQuantity w-7 text-center rounded-full ml-3'>
-						3
-					</p>
+					<h4 className='font-bold smallScreen:text-xl text-3xl pl-4 smallScreen:pl-0'>
+						{name}
+					</h4>
+					<div className=' bg-colorQuantity w-7 rounded-full ml-3 smallScreen:flex hidden items-center justify-center'>
+						<p className='text-white'>3</p>
+					</div>
 				</div>
-				<p className='text-colorSecondaryText mr-[2px] text-sm'>Select</p>
+				<p className='text-colorSecondaryText mr-[2px] text-sm smallScreen:block hidden'>
+					Select
+				</p>
 			</div>
 			<div className='mt-[9px]'>
 				{itemNames.map((itemname, index) => {
